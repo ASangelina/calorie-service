@@ -3,7 +3,7 @@ package com.udesc.carlorieservice.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
-@Table("CALORIE")
+@Table("CALORIERECORD")
 public class CalorieRecord {
     @Id
     private Long id;
