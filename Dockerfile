@@ -1,19 +1,12 @@
-# Usar uma imagem base do Maven para construir o projeto
-FROM maven:3.8.4-openjdk-21 AS build
+#fase de build
+FROM amazoncorretto:21-alpine   as build
 WORKDIR /app
-# Copiar o arquivo pom.xml e baixar as dependências
-COPY pom.xml .
-RUN mvn dependency:go-offline -B
-# Copiar o código do projeto e construir o JAR
-COPY src ./src
-RUN mvn clean package -DskipTests
+COPY . .
+RUN ./mvnw clean package
 
-# Usar uma imagem base do OpenJDK para rodar o aplicativo
-FROM openjdk:21-jdk-slim
+# fase para gerar a imagem docker de prod
+FROM build as prod
 WORKDIR /app
-# Copiar o JAR do estágio de build para o novo estágio
-COPY --from=build /app/target/*.jar app.jar
-# Informar qual porta o contêiner expõe
-EXPOSE 8080
-# Comando para rodar o aplicativo
-ENTRYPOINT ["java", "-jar", "app.jar"]
+COPY --from=build /app/target/*.jar /app/application.jar
+EXPOSE 8080:8080
+CMD ["java", "-jar", "application.jar"]
