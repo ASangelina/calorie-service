@@ -1,6 +1,6 @@
-package com.udesc.carlorieservice.repository;
+package com.udesc.calorieservice.repository;
 
-import com.udesc.carlorieservice.model.CalorieRecord;
+import com.udesc.calorieservice.model.CalorieRecord;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

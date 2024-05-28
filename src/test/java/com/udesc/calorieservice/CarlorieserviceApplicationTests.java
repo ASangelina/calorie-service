@@ -1,4 +1,4 @@
-package com.udesc.carlorieservice;
+package com.udesc.calorieservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

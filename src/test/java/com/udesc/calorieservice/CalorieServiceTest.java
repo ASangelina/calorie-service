@@ -1,7 +1,7 @@
-package com.udesc.carlorieservice;
+package com.udesc.calorieservice;
 
-import com.udesc.carlorieservice.model.CalorieRecord;
-import com.udesc.carlorieservice.service.CalorieService;
+import com.udesc.calorieservice.model.CalorieRecord;
+import com.udesc.calorieservice.service.CalorieService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

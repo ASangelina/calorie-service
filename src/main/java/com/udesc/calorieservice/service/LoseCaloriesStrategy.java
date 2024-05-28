@@ -1,4 +1,4 @@
-package com.udesc.carlorieservice.service;
+package com.udesc.calorieservice.service;
 
 public class LoseCaloriesStrategy implements CalorieStrategy{
     @Override

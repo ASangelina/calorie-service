@@ -1,13 +1,13 @@
-package com.udesc.carlorieservice;
+package com.udesc.calorieservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CarlorieserviceApplication {
+public class CalorieserviceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CarlorieserviceApplication.class, args);
+		SpringApplication.run(CalorieserviceApplication.class, args);
 	}
 
 }

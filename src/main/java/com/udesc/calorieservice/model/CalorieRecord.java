@@ -1,5 +1,6 @@
-package com.udesc.carlorieservice.model;
+package com.udesc.calorieservice.model;
 
+import com.udesc.calorieservice.visitor.CalorieVisitor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
@@ -40,5 +41,9 @@ public class CalorieRecord {
 
     public void setGoal(String goal) {
         this.goal = goal;
+    }
+
+    public void accept(CalorieVisitor visitor) {
+        visitor.visit(this);
     }
 }

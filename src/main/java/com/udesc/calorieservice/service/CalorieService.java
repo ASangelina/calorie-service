@@ -1,6 +1,6 @@
-package com.udesc.carlorieservice.service;
+package com.udesc.calorieservice.service;
 
-import com.udesc.carlorieservice.model.CalorieRecord;
+import com.udesc.calorieservice.model.CalorieRecord;
 
 import java.util.List;
 
