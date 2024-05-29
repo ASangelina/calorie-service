@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-@SpringBootTest
+@SpringBootTest(properties = "spring.config.location=classpath:/application-test.properties")
 public class CalorieServiceTest {
     @Autowired
     private CalorieService calorieService;
