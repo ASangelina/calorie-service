@@ -30,9 +30,7 @@ public class CalorieServiceImpl implements CalorieService{
     @Override
     public int[] calculateDailyCalories(int currentCalories, String goal) {
         DailyCalorieVisitor visitor = new DailyCalorieVisitor(currentCalories, goal);
-        // Supondo que você tenha um registro que queira visitar
-        // Aqui, poderia ser o registro específico baseado em alguma lógica
-        CalorieRecord calorieRecord = new CalorieRecord(); // Substitua com o registro real
+        CalorieRecord calorieRecord = new CalorieRecord();
         calorieRecord.accept(visitor);
         return visitor.getResult();
     }
