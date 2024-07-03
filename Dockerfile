@@ -8,5 +8,5 @@ RUN ./mvnw clean package
 FROM build as prod
 WORKDIR /app
 COPY --from=build /app/target/*.jar /app/application.jar
-EXPOSE 9090:9090
+EXPOSE 8083:8083
 CMD ["java", "-jar", "application.jar"]
